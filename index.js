@@ -9,19 +9,16 @@ dotenv.config();
 
 const port = process.env.dotenv || 3000;
 
-mongoose.connect("mongodb+srv://MONGO_USERNAME:MONGO_PASSWORD@cluster0.zzjooph.mongodb.net/Mern_admin",{
-    useNewUrlParser : true,
-    useUnifiedTopology : true
-});
+mongoose.connect("mongodb+srv://MONGO_USERNAME:MONGO_PASSWORD@cluster0.zzjooph.mongodb.net/Mern_admin");
 
 
 
 const Registeration_schema = new mongoose.Schema({
     username: String,
-    email:String,
-    phone_no:String,
-    gender:String,
-    password:String
+    email: String,
+    phone_no: String,
+    gender: String,
+    password: String
 });
 const Registeration = new mongoose.model("registeration",Registeration_schema);
 app.use(bodyParser.urlencoded({extended:true}));
