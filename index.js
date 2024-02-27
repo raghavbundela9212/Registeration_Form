@@ -9,7 +9,7 @@ dotenv.config();
 
 const port = process.env.dotenv || 3000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/registeration_data",{
+mongoose.connect("mongodb+srv://MONGO_USERNAME:MONGO_PASSWORD@cluster0.zzjooph.mongodb.net/Mern_admin",{
     useNewUrlParser : true,
     useUnifiedTopology : true
 });
